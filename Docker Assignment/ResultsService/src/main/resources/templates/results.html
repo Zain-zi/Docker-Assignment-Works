@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Analytics Report</title>
+</head>
+<body>
+<h1>Analytics Report</h1>
+<table>
+  <tr>
+    <th>Student ID</th>
+    <th>Average</th>
+    <th>Median Grade</th>
+    <th>Maximum Grade</th>
+    <th>Minimum Grade</th>
+  </tr>
+  <tr>
+    <td th:text="${results.studentID}">-</td>
+    <td th:text="${results.courseAvg}">-</td>
+    <td th:text="${results.courseMedian}">-</td>
+    <td th:text="${results.courseMax}">-</td>
+    <td th:text="${results.courseMin}">-</td>
+  </tr>
+</table>
+</body>
+</html>

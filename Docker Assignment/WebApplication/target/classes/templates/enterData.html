@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Course Grades Submission</title>
+</head>
+<body>
+
+<p>Enter grades for student ID <span th:text="${studentID}"></span></p>
+
+<form th:action="@{/enterGrades}" method="post">
+  <input type="hidden" name="studentID" th:value="${studentID}">
+  <label for="cppGrade">C++ Grade:</label>
+  <input type="number" id="cppGrade" name="cppGrade" min="0" max="100" required><br><br>
+
+  <label for="pythonGrade">Python Grade:</label>
+  <input type="number" id="pythonGrade" name="pythonGrade" min="0" max="100" required><br><br>
+
+  <label for="javaGrade">Java Grade:</label>
+  <input type="number" id="javaGrade" name="javaGrade" min="0" max="100" required><br><br>
+
+  <input type="submit" value="Submit Grades">
+</form>
+
+</body>
+</html>
